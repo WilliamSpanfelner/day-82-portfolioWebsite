@@ -1,47 +1,74 @@
 {% include "header.html" %}
 
-    <!-- Example Code -->
-    <!--    <div class="d-grid gap-3">-->
-    <!--      <div class="p-2 bg-light border">Grid item 1</div>-->
-    <!--      <div class="p-2 bg-light border">Grid item 2</div>-->
-    <!--      <div class="p-2 bg-light border">Grid item 3</div>-->
-    <!--    </div>-->
-
-
     <div class="mx-3">
 
-
-        <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+        <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center">
             <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
                 <h3 class="display-8 fw-bold lh-1">Questions? I have answers.</h3>
                 <h1 class="display-4 fw-bold lh-1">Get in touch</h1>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-start my-4 mb-lg-3">
                     <!-- Twitter DM-->
                     <a target="_blank" href="https://twitter.com/messages/compose?recipient_id=1050396392177487873&ref_src=twsrc%5Etfw" class="twitter-dm-button" data-screen-name="@wspanfelner" data-show-count="false">
-                        <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold">DM Me</button>
+                        <button type="button" class="btn btn-primary btn-lg rounded-pill px-4 me-md-2 fw-bold">DM Me</button>
                     </a>
 
-                    <!-- Tweet-->
-                    <a target="_blank" href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">
-                        <button type="button" class="btn btn-outline-secondary btn-lg px-4">Tweet</button>
-                    </a>
-<!--                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>-->
+<!--                    &lt;!&ndash; Tweet&ndash;&gt;-->
+<!--                    <a target="_blank" href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">-->
+<!--                        <button type="button" class="btn btn-outline-secondary btn-lg px-4">Tweet</button>-->
+<!--                    </a>-->
+<!--&lt;!&ndash;                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>&ndash;&gt;-->
 
-                    <!-- email-->
-                    <!-- // TODO: Fix Email button styling to be consistent with the Twitter style -->
-                    <a target="_blank" href="#" class="email-share-button" data-show-count="false">
-                        <button type="button" class="btn btn-outline-primary btn-lg px-4">Email</button>
-                    </a>
+<!--                    &lt;!&ndash; email&ndash;&gt;-->
+<!--                    <a target="_blank" href="#" class="email-share-button" data-show-count="false">-->
+<!--                        <button type="button" class="btn btn-outline-primary btn-lg px-4">Email</button>-->
+<!--                    </a>-->
 <!--                    <script async src="#" charset="utf-8"></script>-->
                 </div>
-                <p class="lead">Reach out with a direct message or email and I will get back to you at the earliest opportunity.</p>
+                <p class="lead">Reach out with a direct message or email with the form below and I will get back to you at the earliest opportunity.</p>
             </div>
-            <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
-<!--                <img class="rounded-lg-3" src="static/coffee100.jpeg" alt="" width="180">-->
+            <div class="col-lg-5 col-md-10 mx-auto">
+                    <!--        <p>Want to get in touch? Fill out the form below to send me a message and I will get back to you as soon as possible!</p>-->
+                            <!-- Contact Form - Enter your email address on line 19 of the mail/contact_me.php file to make this form work. -->
+                            <!-- WARNING: Some web hosts do not allow emails to be sent through forms to common mail hosts like Gmail or Yahoo. It's recommended that you use a private domain email address! -->
+                            <!-- To use the contact form, your site must be on a live web host with PHP! The form will not work locally! -->
+                    <form class="p-4 p-md-5 border rounded-3" name="sentMessage" id="contactForm" novalidate>
+                        <div class="form-floating mb-3"> <!-- control-group -->
+                                 <div class="form-group floating-label-form-group controls">
+                                     <label>Name</label>
+                                     <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
+                                     <p class="help-block text-danger"></p>
+                                 </div>
+                             </div>
+                        <div class="form-floating mb-3">
+                                 <div class="form-group floating-label-form-group controls">
+                                    <label>Email Address</label>
+                                    <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
+                                    <p class="help-block text-danger"></p>
+                                 </div>
+                             </div>
+                        <div class="form-floating mb-3">
+                                 <div class="form-group col-xs-12 floating-label-form-group controls">
+                                    <label>Phone Number</label>
+                                    <input type="tel" class="form-control" placeholder="Phone Number" id="phone" required data-validation-required-message="Please enter your phone number.">
+                                    <p class="help-block text-danger"></p>
+                                 </div>
+                             </div>
+                        <div class="form-floating mb-3">
+                                 <div class="form-group floating-label-form-group controls">
+                                    <label>Comments</label>
+                                    <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter your message."></textarea>
+                                    <p class="help-block text-danger"></p>
+                                 </div>
+                             </div>
+                        <br>
+                        <div id="success"></div>
+                        <button type="submit" class="btn btn-primary rounded-pill px-5 py-1" id="sendMessageButton">Send Email</button>
+                    </form>
             </div>
+<!--                        <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">-->
+            <!--                <img class="rounded-lg-3" src="static/coffee100.jpeg" alt="" width="180">-->
+<!--                        </div>-->
         </div>
     </div>
-
-    <!-- End Example Code -->
 
 {% include "footer.html" %}

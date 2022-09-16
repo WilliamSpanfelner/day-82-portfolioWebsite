@@ -19,6 +19,7 @@ def portfolio():
 
 @app.route("/contact")
 def contact():
+    # TODO: Write the email code here.
     return render_template("contact.html")
 
 
