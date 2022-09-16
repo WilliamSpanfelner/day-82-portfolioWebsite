@@ -6,7 +6,7 @@ Bootstrap(app)
 
 
 @app.route("/")
-def home():
+def about():
     # intro = "Hello, I'm William and this is my portfolio website."
     # print(len(intro))
     return render_template("index.html")
