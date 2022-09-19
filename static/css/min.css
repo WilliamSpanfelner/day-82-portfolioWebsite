@@ -23,8 +23,11 @@ symbol {
     font-size: 0.75rem;
 }
 
-.subheading-container {
+.subheading-font {
     font-family: 'JetBrains Mono', monospace;
+}
+
+.subheading-container {
     display: flex;
     justify-content: center;
     height: 4rem;
