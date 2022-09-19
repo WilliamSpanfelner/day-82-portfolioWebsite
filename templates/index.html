@@ -1,15 +1,64 @@
 {% include "header.html" %}
 
-        <p class="intro">Hello, I'm William and this is my portfolio website. </p>
-        <p>Just a bit of space</p>
-        <p>Just a bit of space</p>
-        <p>Just a bit of space</p>
-        <p>Just a bit of space</p>
-        <p>Just a bit of space</p>
-        <p>Just a bit of space</p>
-        <p>Just a bit of space</p>
-        <p>Just a bit of space</p>
-        <p>Just a bit of space</p>
-        <p>Just a bit of space</p>
+        <!-- Add a Bootstrap Hero and customise -->
+       <div class="px-4 py-5 my-5 text-center">
+            <img id="avatar" class="d-block mx-auto mb-4" src="https://avatars.githubusercontent.com/u/42092799?v=4" alt="" width="57" height="57">
+
+<!--           <svg xmlns="https://www.w3.org/2000/svg" xml:space="preserve" width="100%" height="100%" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality;-->
+<!--           fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 4.48698 1.52388" xmlns:xlink="https://www.w3.org/1999/xlink">-->
+<!--                <g>-->
+<!--                    <polygon class="fil0" points="0,0 0,1.52388 1.52388,1.01592 0,0.76194 1.52388,0.50796 "></polygon>-->
+<!--                    <polygon class="fil0" points="3.13242,0 3.13242,1.52388 1.60854,1.01592 3.13242,0.76194 1.60854,0.50796 "></polygon>-->
+<!--                    <polygon class="fil0" points="3.30174,1.52388 3.30174,0.16932 4.31766,1.52388 "></polygon>-->
+<!--                    <polygon class="fil0" points="3.46636,0 4.48698,1.2699 4.48698,0 "></polygon>-->
+<!--                </g>-->
+<!--           </svg>-->
+
+            <p class="fs-1 fw-bold mb-0">William Spanfelner</p>
+<!--            <p  class="fs-3 fw-bold text-uppercase text-muted text-center">-->
+<!--&lt;!&ndash;                Developer&ndash;&gt;-->
+<!--</p>-->
+                <div class="subheading-container">
+                    <s-h>D</s-h>
+                    <s-h>E</s-h>
+                    <s-h>V</s-h>
+                    <s-h>E</s-h>
+                    <s-h>L</s-h>
+                    <s-h>O</s-h>
+                    <s-h>P</s-h>
+                    <s-h>E</s-h>
+                    <s-h>R</s-h>
+                </div>
+
+            <div class="col-lg-6 mx-auto">
+                <p class="lead mb-4"><span class="fw-bold">William Spanfelner: </span>
+                    A developer, an engineer, specializing in iOS Development with SwiftUI and UIKit.
+                    Engineering has been my life and writing code started for me at the age of 16. The
+                    science has always been the driver for me, while my working life began with flight
+                    control systems, Los Alamos formed a coding pinnacle of my early career. After founding
+                    and operating a computer services business with a networking specialty, another
+                    career milestone manifested when our network design connected 11 regional offices of
+                    London based client. Development is something I do before going to bed and the thing
+                    I look forward most to starting after a morning workout.
+                </p>
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                    <a class="nav-link" href="{{ url_for('portfolio') }}">
+                        <button type="button" class="btn btn-primary btn-lg rounded-pill gap-3 px-5 py-1">Project Portfolio</button>
+                    </a>
+                    <a class="nav-link" href="{{ url_for('contact') }}">
+                        <button type="button" class="btn btn-primary btn-lg rounded-pill px-5 py-1">Contact Me</button>
+                    </a>
+                </div>
+            </div>
+       </div>
+
+       <div class="h-100">
+            <div class="d-flex h-100 text-center text-bg-dark">
+                <div class="cover-container d-flex w-100 h-100 mx-auto flex-column">
+                    <p class="intro">Hello, I'm William and this is my portfolio website. </p>
+                    <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+                </div>
+            </div>
+       </div>
 
 {% include "footer.html" %}
