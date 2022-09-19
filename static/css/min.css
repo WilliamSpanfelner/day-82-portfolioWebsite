@@ -1,21 +1,41 @@
 @import url('https://fonts.googleapis.com/css?family=Space+Mono');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&display=swap');
 
 body {
     background-color: #121212;
     color: #adb5bd;
 
-/* rules for sticky footer */
+    /* rules for sticky footer */
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+}
+
+symbol {
+    fill: #6c757d;
+}
+
+#avatar {
+    border-radius: 50%;
 }
 
 #sendMessageButton {
     font-size: 0.75rem;
 }
 
-symbol {
-    fill: #6c757d;
+.subheading-container {
+    font-family: 'JetBrains Mono', monospace;
+    display: flex;
+    justify-content: center;
+    height: 4rem;
+}
+
+/* Custom tag created for subheading */
+s-h {
+    animation-name: spread;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 .intro {
@@ -31,6 +51,18 @@ symbol {
 .intro {
     animation: animated-text 4s steps(52,end) 1s 1 normal both,
                animated-cursor 600ms steps(52,end) infinite;
+}
+
+@keyframes spread {
+    0% {padding: 0 0;}
+    5% {padding: 0 1rem;
+         font-size: 110%;}
+    10% {padding: 0 1.2rem;
+         font-size: 120%;}
+    50% {padding: 0 1.5rem;
+         font-size: 150%;}
+    100% {padding: 0 .5rem;
+          font-size: 110%;}
 }
 
 @keyframes animated-text {
