@@ -29,6 +29,12 @@ symbol {
     font-size: 0.75rem;
 }
 
+.nav-link[aria-current="page"] {
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+    border-bottom-color: #adb5bd;
+}
+
 .subheading-font {
     font-family: 'JetBrains Mono', monospace;
 }
