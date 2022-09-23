@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 from flask_bootstrap import Bootstrap
+from datetime import date
 
 app = Flask(__name__)
 Bootstrap(app)
@@ -9,7 +10,8 @@ Bootstrap(app)
 def about():
     # intro = "Hello, I'm William and this is my portfolio website."
     # print(len(intro))
-    return render_template("index.html")
+    year = date.today().year
+    return render_template("index.html", yr=year)
 
 
 @app.route("/portfolio")
@@ -24,4 +26,4 @@ def contact():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    app.run(host="0.0.0.0", port=4000)
