@@ -9,7 +9,7 @@
     <div class="row"> <!-- py-lg-5-->
       <div class="col-lg-6 col-md-8 mx-auto">
         <p class="display-3">Check-out my work</p>
-        <p class="lead text-muted">The following collection represents a sample of projects with which I have engaged.</p>
+        <p class="lead text-muted">The following collection summarises projects I have completed to date. Click/Tap on any project for more detail.</p>
 
         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
              <a class="nav-link" href="{{ url_for('contact') }}">
@@ -33,22 +33,22 @@
           {% for project in all_projects %}
           <div class="col">
               <div class="card shadow-sm">
-                  <a target="_blank" href={{project['project_url']}}>
-                      <!-- //TODO: See this for image styling rules https://getbootstrap.com/docs/5.2/content/images/-->
-                      <img src="{{ project['image_url'] }}" class="rounded" width=100% height=225 alt={{ project['image_alt_text'] }}>
+                  <a target="_blank" href="{{ project.url if 'http' in project.url else project.endpoint + project.url }}">
+                      <img src="{{ project.endpoint + project.image_url }}" class="rounded" width=100% height=225 alt="{{ project.image_alt_text }}" >
                   </a>
                   <div class="card-body">
-                      <p class="card-text">{{ project['description'] }}</p>
+                      <p class="card-text">{{ project.description }}</p>
                       <div class="d-flex justify-content-between align-items-center">
-                              <a target="_blank" href={{project['project_url']}}>
+                              <a target="_blank" href="{{ project.url if 'http' in project.url else project.endpoint + project.url }}">
                                     <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
                               </a>
-                          <small class="text-muted">{{project['posted']}}</small>
+                          <small class="text-muted">{{ project.posted }}</small>
                       </div>
                   </div>
               </div>
           </div>
           {% endfor %}
+          
       </div>
     </div>
   </div>
